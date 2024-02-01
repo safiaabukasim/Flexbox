@@ -1,0 +1,159 @@
+<!-- ******************************************
+* Kean University
+* Spring 2024
+* Course: CPS*3500*02
+* Author: Safia Abukasim, CPS*3500, 02
+* Unit 4 HW #3 Flexbox
+********************************************** -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+ body {
+  background: url('blossoms.png') center/cover no-repeat rgb(250, 217, 223);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  height: 100vh; 
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 21px;
+}
+
+nav li {
+  width: 300px;
+  margin-right: 20px;
+  height: 200px; 
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: cursive;
+  background-color: #e1fff4;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  color: #0d62ff;
+  display: block;
+  height: 100%;
+  margin: 20px;
+}
+
+nav a:hover {
+  color: #fb0000;
+  background-color: #ffecd9;
+}
+
+h1 {
+  font-family: cursive;
+  color: rgb(215, 29, 252);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-top: 50px;
+  font-family: cursive;
+  font-size: 23px;
+  color: #ff1306;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end; 
+}
+
+/* Add this to your existing CSS */
+.column {
+  flex: 0 0 calc(30% - 20px);
+  margin: 10px; 
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 300px; 
+}
+
+
+.column a {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: cursive;
+  background-color: #e1fff4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  color: #0d62ff;
+}
+
+.column a:hover {
+  color: #fb0000;
+  background-color: #ffecd9;
+}
+
+.column p {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+
+  </style>
+</head>
+<body>
+
+<h1>Safia's Wonderful Webpage</h1>
+
+<nav>
+    <ul>
+        <li><a>Welcome to my wonderful webpage!</a></li>
+        <li><a>As you can see, when you hover over these boxes, they change color. It's pretty cool. </a></li>
+        <li><a>Besides that, the text inside of the boxes also changes color too! What's great is
+        that the boxes are all the same size, even though the amount of text in them isn't the same.</a></li>
+    </ul>
+</nav>
+
+<div class="welcome-message">
+  If you couldn't already tell, my favorite trees are Cherry Blossom trees. <br> Take a look at all of the pictures! :)
+</div>
+
+<div class="row">
+  <div class="column">
+    <a href="#">
+      <img src="blossom1.png" alt="Snow" style="width:100%">
+      <p>Cherry Blossoms with Mt. Fugi in the background</p>
+    </a>
+  </div>
+  <div class="column">
+    <a href="#">
+      <img src="blossom2.png" alt="Forest" style="width:100%">
+      <p>A very tall shrine and  red bridge with Cherry Blossoms</p>
+    </a>
+  </div>
+  <div class="column">
+    <a href="#">
+      <img src="blossom3.png" alt="Mountains" style="width:100%">
+      <p>People enjoying a boat ride surrounded by Cherry Blossoms</p>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
